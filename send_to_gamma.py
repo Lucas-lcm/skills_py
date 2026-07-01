@@ -12,6 +12,7 @@ def main():
     title = sys.argv[1]
     file_path = sys.argv[2]
     numCards = sys.argv[3]
+    api_key = sys.argv[4]
 
     # 1. Ler o conteúdo em Markdown do arquivo local
     try:
@@ -24,7 +25,7 @@ def main():
     # 2. Configurar o Payload exato que a API do Gamma exige
     url = "https://public-api.gamma.app/v1.0/generations"
     headers = {
-        "X-API-KEY": "sk-gamma-QzEpXndZCNwqZVBxFfEXdRkyMt7uCReWOZi7ZMvok", # COLOQUE SUA CHAVE REAL AQUI
+        "X-API-KEY": api_key,
         "Content-Type": "application/json"
     }
     
